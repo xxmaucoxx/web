@@ -1,0 +1,12 @@
+.cont-registro{
+	width: 40%;
+	margin:0px auto 0px auto;
+	transition: all 3s;
+}
+.frm-oculto{
+    display: block;
+    position: relative;
+    width: 40%;
+    right: -1600px;
+    transition: all 3s;
+}

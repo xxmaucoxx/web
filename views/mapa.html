@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>Descubre</title>
+
+    <!-- CSS  -->
+    <link href="../public/min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="../public/min/custom-min.css" type="text/css" rel="stylesheet" >
+    <link href="../public/css/style.css" type="text/css" rel="stylesheet" >
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        width: 95%;
+        min-height: 400px;
+        margin: 100px auto 100px auto;
+      }
+      .cont{
+      	width: 80%;
+      	margin: 10px auto 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+  	<head>
+  		<div class="navbar-fixed">
+		    <nav id="nav_f" class="default_color2" role="navigation" >
+		        <div class="container">
+		            <div class="nav-wrapper">
+		            <a href="/" id="logo-container" class="brand-logo">Jummp!</a>
+		                <ul class="right hide-on-med-and-down">
+		                    <li><a href="#">Descubrir</a></li>
+		                    <li><a href="#work">Restaurantes</a></li>
+		                    <li><a href="#/resgistrar.html">Registrate</a></li>
+		                    <li><a href="#contact">Contacto</a></li>
+		                </ul>
+		                <ul id="nav-mobile" class="side-nav">
+		                    <li><a href="#intro">Service</a></li>
+		                    <li><a href="#work">Work</a></li>
+		                    <li><a href="#team">Team</a></li>
+		                    <li><a href="#contact">Contact</a></li>
+		                </ul>
+		            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		            </div>
+		        </div>
+		    </nav>
+		</div>
+  	</head>
+  	<div class="cont">
+	  	<h2 class="header text_b">Descubre aqui todas tus opciones </h2>
+	    <div id="map"></div>
+  	</div>
+
+  	<script src="../public/js/mapa.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl11fqFXeNdnZXg6esPbgTj8MiOCxjnAM&callback=initMap"></script>
+  </body>
+</html>
