@@ -18,9 +18,9 @@
 		    <nav id="nav_f" class="default_color2" role="navigation" >
 		        <div class="container">
 		            <div class="nav-wrapper">
-		            <a href="/" id="logo-container" class="brand-logo">Jummp!</a>
+		            <a href="../../proyecto/" id="logo-container" class="brand-logo">Jummp!</a>
 		                <ul class="right hide-on-med-and-down">
-		                    <li><a href="#">Descubrir</a></li>
+		                    <li><a href="/proyecto/views/mapa.html">Descubrir</a></li>
 		                    <li><a href="#">Restaurantes</a></li>
 		                    <li><a href="#">Registrate</a></li>
 		                    <li><a href="#contact">Contacto</a></li>
@@ -40,79 +40,44 @@
   	<h3 class="header text_b" style="text-align: center;margin-top: 50px">¿Quieres formarte parte de esta gran aplicacion? </h3>
   	<p class="header text_b" style="color:black;font-size: 1.7rem;margin-bottom: 100px;width: 60%;text-align: center;margin: 10px auto 30px auto">Solo tienes que llenar el siguiente formulario y listo!. Empezaras a recibir más clientela en menos de lo qie esperas </p>
   	<section class="cont-registro">
-  		<div>
-		    <div class="row">
-		    	<div style="margin-left:55px;margin-top: 70px;margin-bottom: 20px" class="blue-text ">Datos del Restaurante</div>
+  		<form action="../controller/subir.php" class="row" method="POST" enctype="multipart/form-data">
+		    <div style="margin-left:55px;margin-top: 70px;margin-bottom: 20px" class="blue-text ">Datos del Restaurante</div>
 		        <div class="input-field col s12">
 		          <i class="material-icons prefix"></i>
-		          <input id="icon_prefix" type="text" class="validate">
-		          <label for="icon_prefix">Nombre del Restaurante</label>
+		          <input id="nombre" name="nombre" type="text" class="validate">
+		          <label for="nombre">Nombre del Restaurante</label>
 		        </div>
 		        <div class="input-field col s12">
 		          <i class="material-icons prefix"></i>
-		          <input id="icon_telephone" type="text" class="validate">
-		          <label for="icon_telephone">Descripción</label>
+		          <input id="descripcion" type="text" class="validate" name="descripcion">
+		          <label for="descripcion">Descripción</label>
 		        </div>
 		        <br><br>
 		        <div style="margin-left:55px;margin-top: 150px;margin-bottom: 20px" class="blue-text ">Ubicación</div>
 		         <div class="input-field col s12">
 		          <i class="material-icons prefix"></i>
-		          <input id="icon_telephone" type="text" class="validate">
-		          <label for="icon_telephone">Latitud</label>
+		          <input id="latitud" type="text" class="validate" name="latitud">
+		          <label for="latitud">Latitud</label>
 		        </div>
 		        <div class="input-field col s12">
 		          <i class="material-icons prefix"></i>
-		          <input id="icon_telephone" type="text" class="validate">
-		          <label for="icon_telephone">Longitud</label>
+		          <input id="longitud" type="text" class="validate" name="longitud">
+		          <label for="longitud">Longitud</label>
 		        </div>
 		        <div class="file-field input-field col s11" style="margin-left: 50px">
 			      <div class="btn blue">
 			        <span>File</span>
-			        <input type="file">
+			        <input type="file" id="imagen" name="imagen">
 			      </div>
 			      <div class="file-path-wrapper">
-			        <input class="file-path validate" type="text">
+			        <input class="file-path validate" type="text" name="imagen" id="imagen">
 			      </div>
 			    </div>
 		    	</div>
 				<div class="row" style="margin-left: 50px;margin-top:60px">
-			   		<a class="waves-effect waves-light btn col m5 blue" onclick="continuar()" >&nbsp Continuar &nbsp </a>
-			   		<a class="waves-effect waves-light btn col m5 blue" style="margin-left: 20px" > &nbsp Atras &nbsp </a>
 			   	</div>
-		      
-		  	</div>
-  	</section>
-  	<section class="frm-oculto">
-		    <div class="row">
-		    	<div style="margin-left:55px;margin-top: 70px;margin-bottom: 20px" class="blue-text ">Datos personales</div>
-		        <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
-		          <input id="icon_prefix" type="text" class="validate">
-		          <label for="">Escriba su nombre</label>
-		        </div>
-		        <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
-		          <input id="icon_telephone" type="text" class="validate">
-		          <label for="">Sus apellidos</label>
-		        </div>
-		        <br><br>
-		         <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
-		          <input id="icon_telephone" type="text" class="validate">
-		          <label for="">Su DNI</label>
-		        </div>
-		        <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
-		          <input type="date" class="datet">
-		          <label for="">Fecha de Nacimiento</label>
-		        </div>
-		        <br>
-			   	<div class="row" style="margin-left: 50px;margin-top:60px">
-			   		<a class="waves-effect waves-light btn col m5 blue" ><i class="mdi-social-group-add" style="font-size: 1.2rem"></i> &nbsp Terminar </a>
-			   		<a class="waves-effect waves-light btn col m5 blue" style="margin-left: 20px" onclick="ocultar()" ><i class="mdi-content-send" style="font-size: 1.2rem"></i> &nbsp Atras</a>
-			   	</div>
-		      
-		  	</div>
+			   	<button type="submit" class="waves-effect waves-light btn col m5 blue" >&nbsp Registrar &nbsp </button>
+		</form>
   	</section>
   	<script src="../public/js/jquery-2.1.1.min.js"></script>
   	<script src="../public/js/materialize.js"></script>
