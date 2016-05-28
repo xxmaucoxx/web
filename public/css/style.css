@@ -27,6 +27,7 @@
     position: relative;
     top: -70px;
     background-image: url(../img/fondo2.jpg) ;
+    background-repeat: no-repeat;
 }
 
 #nav_f{

@@ -27,7 +27,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload='coor()'>
   	<head>
   		<div class="navbar-fixed">
 		    <nav id="nav_f" class="default_color2" role="navigation" >
@@ -56,8 +56,10 @@
 	  	<h2 class="header text_b">Descubre aqui todas tus opciones </h2>
 	    <div id="map"></div>
   	</div>
-
+    <script src="../public/min/plugin-min.js"></script>
+    <script src="../public/min/custom-min.js"></script>
   	<script src="../public/js/mapa.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl11fqFXeNdnZXg6esPbgTj8MiOCxjnAM&callback=initMap"></script>
+  
   </body>
 </html>

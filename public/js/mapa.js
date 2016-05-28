@@ -1,5 +1,20 @@
-function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
+var m=new Array();
+function coor(){
+  $.ajax({
+              type:'post',
+              url:'../controller/restauranteController.php',
+              dataType:'json',
+              data:"accion=buscar",
+              success:function(html)
+              { 
+                mapas(html);
+              }
+            });
+
+}
+function mapas(m) {
+  nm=m.length;
+  var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
           zoom: 16
         });
@@ -12,29 +27,26 @@ function initMap() {
               lat: position.coords.latitude,
               lng: position.coords.longitude,
             };
-            var pos2 = {
+            var post = {
               lat: position.coords.latitude+0.00033,
               lng: position.coords.longitude,
             };
-            var pos3 = {
-              lat: position.coords.latitude+0.0009,
-              lng: position.coords.longitude,
-            };
-
-              var image = '../public/img/yo2.png';
+            var image = '../public/img/yo2.png';
                   var beachMarker = new google.maps.Marker({
                     position:pos,
                     map: map,
                     icon: image
                   });
-              var image2 = '../public/img/ico2.png';
+             var mark = '../public/img/ico2.png';
+            for (var i = 0; i < nm; i++) {
                   var beachMarker = new google.maps.Marker({
-                    position:pos3,
+                    position:{lat: parseFloat(m[i][3]), lng: parseFloat(m[i][4])},
                     map: map,
-                    icon: image2
+                    icon: mark
                   });
-
-            infoWindow.setPosition(pos2);
+                  console.log(beachMarker);
+            }
+            infoWindow.setPosition(post);
             infoWindow.setContent('Aqui estas!.');
             map.setCenter(pos);
           }, function() {
@@ -51,4 +63,4 @@ function initMap() {
         infoWindow.setContent(browserHasGeolocation ?
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
-      }
+}

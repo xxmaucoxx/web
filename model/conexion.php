@@ -9,7 +9,7 @@ class conexion
 	{	$this->server="127.0.0.1";
 		$this->user="root";
 		$this->clave="";
-		$this->bd="foro";
+		$this->bd="jummp";
 	}
 	function conectar()
 	{	$this->conex=new mysqli($this->server,$this->user,$this->clave,$this->bd);
