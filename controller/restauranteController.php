@@ -1,5 +1,5 @@
 <?php
-	$accion=$_REQUEST['accion'];
+	$accion='buscar';
 	require_once("../model/resturantes.php");
 	switch($accion)
 	{

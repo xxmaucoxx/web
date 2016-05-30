@@ -25,7 +25,7 @@ if ( !isset($_FILES["imagen"]) || $_FILES["imagen"]["error"] > 0){
 		$resultado = @mysql_query("INSERT INTO restaurante (nombre, descripcion, latitud, longitud, imagen) VALUES ('$nombre','$descripcion','$latitud','$longitud','$nombrearchivo')") ;
 
 		if ($resultado){
-			echo "el archivo ha sido copiado exitosamente";
+			header('Location: ../');
 		} else {
 			echo "ocurrio un error al copiar el archivo.";
 		}

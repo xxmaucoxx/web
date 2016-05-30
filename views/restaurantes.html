@@ -1,0 +1,32 @@
+<div class="cont" ng-controller="restaurantesController" ng-init="getres()">
+	<div class="cont2">
+		<div class="row">
+			<div class="col m6 s12">
+				Encuentra aqui las mejores opciones.
+			</div>
+			<div class="input-field col m6 s12">
+	          <i class="mdi-action-search prefix"></i>
+	          <input id="search" placeholder="Escribe aqui que quieres encontrar" type="text" ng-model="buscar" class="validate">
+	        </div>
+		</div>
+		
+		<div class="card-panel grey lighten-5 z-depth-1" ng-repeat=" y in datos | filter:buscar">
+	    	<div class="row valign-wrapper">
+	        	<div class="col s2">
+	              <img src="image/{{y.imagen}}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+	            </div>
+	            <div class="col s10">
+	              <div class="black-text">
+	              	<p>{{y.nombre}}</p>
+	              	<p>{{y.descripcion}}</p>
+	                
+	              </div>
+	              <div class="btn-like">
+		                <a href=""><img src="public/img/like.png" width="20">15</a>
+		                <a href=""><img src="public/img/nolike.png" width="20">25</a>	
+	              </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>

@@ -1,86 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="theme-color" content="#2196F3">
-    <title>Descubre</title>
-
-    <!-- CSS  -->
-    <link href="../public/min/plugin-min.css" type="text/css" rel="stylesheet">
-    <link href="../public/min/custom-min.css" type="text/css" rel="stylesheet" >
-    <link href="../public/css/style.css" type="text/css" rel="stylesheet" >
-    <link href="../public/css/kira.css" type="text/css" rel="stylesheet" >
-</head>
-<body>
-	<head>
-  		<div class="navbar-fixed">
-		    <nav id="nav_f" class="default_color2" role="navigation" >
-		        <div class="container">
-		            <div class="nav-wrapper">
-		            <a href="../../proyecto/" id="logo-container" class="brand-logo">Jummp!</a>
-		                <ul class="right hide-on-med-and-down">
-		                    <li><a href="/proyecto/views/mapa.html">Descubrir</a></li>
-		                    <li><a href="#">Restaurantes</a></li>
-		                    <li><a href="#">Registrate</a></li>
-		                    <li><a href="#contact">Contacto</a></li>
-		                </ul>
-		                <ul id="nav-mobile" class="side-nav">
-		                    <li><a href="#intro">Service</a></li>
-		                    <li><a href="#work">Work</a></li>
-		                    <li><a href="#team">Team</a></li>
-		                    <li><a href="#contact">Contact</a></li>
-		                </ul>
-		            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-		            </div>
-		        </div>
-		    </nav>
-		</div>
-  	</head>
-  	<h3 class="header text_b" style="text-align: center;margin-top: 50px">¿Quieres formarte parte de esta gran aplicacion? </h3>
-  	<p class="header text_b" style="color:black;font-size: 1.7rem;margin-bottom: 100px;width: 60%;text-align: center;margin: 10px auto 30px auto">Solo tienes que llenar el siguiente formulario y listo!. Empezaras a recibir más clientela en menos de lo qie esperas </p>
+<div>
+  	<h3 class="header" style="text-align: center;margin-top: 50px;color: #e65100">¿Quieres formarte parte de esta gran aplicacion? </h3>
+  	<p class="header text_b" style="color:black;font-size: 1.7rem;bottom: 150px;width: 60%;text-align: center;margin: 10px auto 30px auto">Solo tienes que llenar el siguiente formulario y listo! Empezaras a recibir más clientela en menos de lo que esperas. </p>
   	<section class="cont-registro">
-  		<form action="../controller/subir.php" class="row" method="POST" enctype="multipart/form-data">
-		    <div style="margin-left:55px;margin-top: 70px;margin-bottom: 20px" class="blue-text ">Datos del Restaurante</div>
-		        <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
+  		<form action="controller/subir.php" class="row" method="POST" enctype="multipart/form-data">
+		    <div  style="color: #e65100">Datos del Restaurante</div>
+		        <div class="input-field col m12">
+		          <i class="mdi-image-edit prefix"></i>
 		          <input id="nombre" name="nombre" type="text" class="validate">
 		          <label for="nombre">Nombre del Restaurante</label>
 		        </div>
-		        <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
+		        <div class="input-field col m12" style="margin-bottom: 50px">
+		          <i class="mdi-image-blur-linear prefix"></i>
 		          <input id="descripcion" type="text" class="validate" name="descripcion">
 		          <label for="descripcion">Descripción</label>
 		        </div>
-		        <br><br>
-		        <div style="margin-left:55px;margin-top: 150px;margin-bottom: 20px" class="blue-text ">Ubicación</div>
-		         <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
+		        <div style="color: #e65100">Ubicación</div>
+		        <p>Si no sabes tus coordenadas <a href="" onclick="vervideo()">Haz click aqui.</a></p>
+		        <div class="vdo">
+			    	<iframe width="420" height="100%"src="https://www.youtube.com/embed/XD8DQnQ0XkM?autoplay=0" frameborder="0"></iframe>
+			    </div>
+		        <div class="input-field col m12">
+		          <i class="mdi-communication-location-on prefix"></i>
 		          <input id="latitud" type="text" class="validate" name="latitud">
 		          <label for="latitud">Latitud</label>
 		        </div>
-		        <div class="input-field col s12">
-		          <i class="material-icons prefix"></i>
+		        <div class="input-field col m12">
+		          <i class="mdi-communication-location-on prefix"></i>
 		          <input id="longitud" type="text" class="validate" name="longitud">
 		          <label for="longitud">Longitud</label>
 		        </div>
-		        <div class="file-field input-field col s11" style="margin-left: 50px">
-			      <div class="btn blue">
+		        <div class="file-field input-field col s11">
+			      <div class="btn orange darken-4">
 			        <span>File</span>
 			        <input type="file" id="imagen" name="imagen">
 			      </div>
 			      <div class="file-path-wrapper">
-			        <input class="file-path validate" type="text" name="imagen" id="imagen">
+			        <input class="file-path validate " type="text" name="imagen" id="imagen">
 			      </div>
 			    </div>
-		    	</div>
-				<div class="row" style="margin-left: 50px;margin-top:60px">
-			   	</div>
-			   	<button type="submit" class="waves-effect waves-light btn col m5 blue" >&nbsp Registrar &nbsp </button>
+			    <br>
+			   	<button type="submit" class="waves-effect btn orange darken-4 btnr">&nbsp Registrar &nbsp </button>
 		</form>
   	</section>
-  	<script src="../public/js/jquery-2.1.1.min.js"></script>
-  	<script src="../public/js/materialize.js"></script>
-  	<script src="../public/js/kira.js"></script>
-</body>
-</html>
+</div>
+<script>
+	function vervideo(){
+		$('.vdo').css('height','315px');
+	}
+</script>

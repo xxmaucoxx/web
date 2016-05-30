@@ -1,12 +1,32 @@
+#map{
+	width: 90%;
+	height: 400px;
+	margin: 100px auto 200px auto;
+}
 .cont-registro{
-	width: 40%;
-	margin:0px auto 0px auto;
-	transition: all 3s;
+	width: 80%;
+	max-width: 450px;
+	margin: 20px auto 50px auto;
+	top: 50px;
 }
-.frm-oculto{
-    display: block;
-    position: relative;
-    width: 40%;
-    right: -1600px;
-    transition: all 3s;
-}
+.btnr{
+    width: 60%;
+    top: 40px;
+    left: 20%;
+    margin-bottom: 100px;
+ }
+.vdo{
+ 	height:0px;
+ 	transition: all 2s;
+ }
+.cont{
+ 	width: 80%;
+ 	margin: 50px auto 100px auto
+ }
+ .cont2{
+ 	width: 90%;
+ 	margin: 50px auto 100px auto
+ }
+ .btn-like{
+ 	float: right;
+ }
