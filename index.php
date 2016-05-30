@@ -24,7 +24,7 @@
 </div>
 <!--Navigation-->
  <div class="navbar-fixed">
-    <nav id="nav_f" class="orange darken-4" role="navigation" >
+    <nav id="nav_f" class="default_color2" role="navigation" >
         <div class="container">
             <div class="nav-wrapper">
             <a href="#" id="logo-container" class="brand-logo">Jummp!</a>
